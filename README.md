@@ -1,28 +1,29 @@
 # microblog
+```shell
  python flask tutorial
+```
 
 # dependences
+```shell
 pip install flask
-
 export FLASK_APP=microblog.py
-
 pip install python-dotenv
-
 pip install flask-wtf
-
 pip install flask-sqlalchemy
-
 pip install flask-migrate
+```
 
 ## db migration
+```
 flask db init
-
 flask db migrate -m "users table"
-
 flask db upgrade
+```
 
 ## db manipulation
+```
 flask shell
+```
 
 ### shell example 1
 ```python
@@ -52,7 +53,9 @@ for p in posts:
 db.session.commit()
 ```
 ## continue installation
+```
 pip install flask-login
+```
 
 ### shell example 2
 ```python
@@ -63,4 +66,6 @@ db.session.commit()
 ```
 
 ## continue installation
+```
 pip install email-validator
+```
