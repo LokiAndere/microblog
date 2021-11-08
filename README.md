@@ -18,11 +18,11 @@ flask db upgrade
 flask shell
 
 ### shell example 1
-'''
+```
 users = User.query.all()
 for u in users:
     print(u.id, u.username)
-'''
+```
 
 >>> u = User.query.get(1)
 >>> posts = u.posts.all()
