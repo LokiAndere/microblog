@@ -1,10 +1,10 @@
 # microblog
-```shell
  python flask tutorial
-```
+ 
+ commands should be executed in own environment and inside microblog folder
 
 # dependences
-```shell
+```
 pip install flask
 export FLASK_APP=microblog.py
 pip install python-dotenv
