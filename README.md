@@ -18,24 +18,24 @@ flask db upgrade
 flask shell
 
 ### shell example 1
-```
+```python
 users = User.query.all()
 for u in users:
     print(u.id, u.username)
 ```
-```
+```python
 u = User.query.get(1)
 posts = u.posts.all()
 ```
-```
+```python
 posts = Post.query.all()
 for p in posts:
     print(p.id, p.author.username, p.body)
 ```
-```
+```python
 User.query.order_by(User.username.desc()).all()
 ```
-```
+```python
 users = User.query.all()
 for u in users:
     db.session.delete(u)
