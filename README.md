@@ -23,34 +23,37 @@ users = User.query.all()
 for u in users:
     print(u.id, u.username)
 ```
-
->>> u = User.query.get(1)
->>> posts = u.posts.all()
-
->>> posts = Post.query.all()
->>> for p in posts:
-...     print(p.id, p.author.username, p.body)
-
->>> User.query.order_by(User.username.desc()).all()
-
->>> users = User.query.all()
->>> for u in users:
-...     db.session.delete(u)
-...
->>> posts = Post.query.all()
->>> for p in posts:
-...     db.session.delete(p)
-...
->>> db.session.commit()
-
+```
+u = User.query.get(1)
+posts = u.posts.all()
+```
+```
+posts = Post.query.all()
+for p in posts:
+    print(p.id, p.author.username, p.body)
+```
+```
+User.query.order_by(User.username.desc()).all()
+```
+```
+users = User.query.all()
+for u in users:
+    db.session.delete(u)
+posts = Post.query.all()
+for p in posts:
+    db.session.delete(p)
+db.session.commit()
+```
 ## continue installation
 pip install flask-login
 
 ### shell example 2
->>> u = User(username='susan', email='susan@example.com')
->>> u.set_password('cat')
->>> db.session.add(u)
->>> db.session.commit()
+```python
+u = User(username='susan', email='susan@example.com')
+u.set_password('cat')
+db.session.add(u)
+db.session.commit()
+```
 
 ## continue installation
 pip install email-validator
