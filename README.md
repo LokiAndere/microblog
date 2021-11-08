@@ -3,15 +3,22 @@
 
 # dependences
 pip install flask
+
 export FLASK_APP=microblog.py
+
 pip install python-dotenv
+
 pip install flask-wtf
+
 pip install flask-sqlalchemy
+
 pip install flask-migrate
 
 ## db migration
 flask db init
+
 flask db migrate -m "users table"
+
 flask db upgrade
 
 ## db manipulation
